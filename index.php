@@ -22,12 +22,12 @@ include_once("./functions/fetch.php")
         <?php
         while($res = mysqli_fetch_array($result)) {
             echo "<tr>";
-            echo "<td>".$res['subject_id']."</td>";
-            echo "<td>".$res['subject_code']."</td>";
-            echo "<td>".$res['subject_name']."</td>";
+            echo "<td>".$res['Subject_ID']."</td>";
+            echo "<td>".$res['Subject_Code']."</td>";
+            echo "<td>".$res['Subject_Name']."</td>";
             echo "<td>
-            <a href=\"forms/editform.php?id=$res[subject_id]\">Edit</a> |
-            <a href=\"functions/delete.php?id=$res[subject_id]\"
+            <a href=\"forms/editform.php?id=$res[Subject_ID]\">Edit</a> |
+            <a href=\"functions/delete.php?id=$res[Subject_ID]\"
             onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a>
             </td>";
         }
