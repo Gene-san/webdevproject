@@ -6,19 +6,18 @@ if(isset($_POST['update'])) {
     $name = $_POST['name'];
 
     if(empty($code) || empty($name)) {
+        echo $id;
         if(empty($code) || empty($name)) {
             if(empty($code)) {
                 echo "<font color='red'> Subject Code field is empty.</font><br/>";;
             }
             if(empty($name)) {
-                echo "<font color='red'> Subject Name field is empty.</font><br/>";;
+                echo "<font color='red'> Subject Name field is empty.</font><br/>";
             }
-        } else {
-            mysqli_query($dbc, "UPDATE tblsubject SET subject_code='$code', subeject_name='$name' WHERE subject_id='$id'");
-            header('Location: ../index.php');
-        }
+        } 
+    } else {
+        mysqli_query($dbc, "UPDATE tblsubjects SET Subject_Code='$code', Subject_Name='$name' WHERE Subject_ID='$id'");
+        header('Location: ../index.php');
     }
 }
-
-
 ?>
