@@ -17,6 +17,9 @@ include_once("./functions/fetch.php")
             <td>ID</td>
             <td>Subject Code</td>
             <td>Subject Name</td>
+            <td>Syllabus ID</td>
+            <td>Syllabus Code</td>
+            <td>Syllabus Author</td>
             <td>Action</td>
         </tr>
         <?php
@@ -25,6 +28,9 @@ include_once("./functions/fetch.php")
             echo "<td>".$res['Subject_ID']."</td>";
             echo "<td>".$res['Subject_Code']."</td>";
             echo "<td>".$res['Subject_Name']."</td>";
+            echo "<td>".$res['syllabus_id']."</td>";
+            echo "<td>".$res['syllabus_name']."</td>";
+            echo "<td>".$res['syllabus_author']."</td>";
             echo "<td>
             <a href=\"forms/editform.php?id=$res[Subject_ID]\">Edit</a> |
             <a href=\"functions/delete.php?id=$res[Subject_ID]\"
